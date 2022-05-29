@@ -1,9 +1,15 @@
 import React from "react";
+import { ToastContainer } from "react-toastify";
+import AuthContextProvider from "./context/AuthContext";
+import AppRouter from "./router/AppRouter";
 
 const App = () => {
   return (
     <div>
-      <h2>Movie App</h2>
+      <AuthContextProvider>
+        <AppRouter />
+        <ToastContainer />
+      </AuthContextProvider>
     </div>
   );
 };
